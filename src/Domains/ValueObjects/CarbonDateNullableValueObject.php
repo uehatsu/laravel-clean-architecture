@@ -8,7 +8,7 @@ use DateTimeInterface;
 use Exception;
 use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 
-class CarbonDateNullableValueObject implements ValueObjectCore
+abstract class CarbonDateNullableValueObject implements ValueObjectCore
 {
     private ?Carbon $value;
     private static string $name = 'CarbonDateNullableValueObject';
