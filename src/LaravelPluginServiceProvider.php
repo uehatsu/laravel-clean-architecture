@@ -7,11 +7,12 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelPluginServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang/', 'uehatsu-lca');
     }
 
-    public function register()
+    public function register(): void
     {
     }
 }
