@@ -25,7 +25,7 @@ abstract class CarbonDateNotNullValueObject implements ValueObjectCore
             try {
                 $tmp = Carbon::parse($value);
             } catch (Exception) {
-                $message = trans('uehatsu-lca::error.:object must be a valid date and time.', ['object' => static::$name]);
+                $message = trans('uehatsu-lca::error.The :object should be a valid date and time value.', ['object' => static::$name]);
                 throw new InvalidArgumentException($message);
             }
         } else {
