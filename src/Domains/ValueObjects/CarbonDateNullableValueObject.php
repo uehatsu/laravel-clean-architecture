@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Uehatsu\LaravelCleanArchitecture\Domains\ValueObjects;
@@ -11,7 +12,7 @@ use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 abstract class CarbonDateNullableValueObject implements ValueObjectCore
 {
     private ?Carbon $value;
-    private static string $name = 'CarbonDateNullableValueObject';
+    protected static string $name = 'CarbonDateNullableValueObject';
 
     /**
      * @param DateTimeInterface|string|null $value
@@ -19,15 +20,17 @@ abstract class CarbonDateNullableValueObject implements ValueObjectCore
      */
     public function __construct(
         DateTimeInterface|string|null $value,
-    )
-    {
+    ) {
         if (empty($value)) {
             $tmp = null;
         } elseif (is_string($value)) {
             try {
                 $tmp = Carbon::parse($value);
             } catch (Exception $e) {
-                $message = trans('uehatsu-lca::error.The :object should either be null or a valid date and time value.', ['object' => static::$name]);
+                $message = trans(
+                    'uehatsu-lca::error.The :object should either be null or a valid date and time value.',
+                    ['object' => static::$name]
+                );
                 throw new InvalidArgumentException($message);
             }
         } else {
@@ -42,7 +45,11 @@ abstract class CarbonDateNullableValueObject implements ValueObjectCore
         return $this->value;
     }
 
-    public function equals(ValueObjectCore $other): bool
+    /**
+     * @param static $other
+     * @return bool
+     */
+    public function equals($other): bool
     {
         return $other instanceof static &&
             (

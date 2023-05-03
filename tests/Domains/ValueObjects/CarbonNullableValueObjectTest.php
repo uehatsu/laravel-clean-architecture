@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Uehatsu\LaravelCleanArchitecture\Test\Domains\ValueObjects;
@@ -102,7 +103,9 @@ class CarbonNullableValueObjectTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('The CarbonNullableValueObject should either be null or a valid date and time value.');
+        $this->expectExceptionMessage(
+            'The CarbonNullableValueObject should either be null or a valid date and time value.'
+        );
 
         $value = 'NG';
 
