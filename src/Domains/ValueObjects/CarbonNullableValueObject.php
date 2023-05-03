@@ -8,7 +8,6 @@ use Carbon\Carbon;
 use DateTimeInterface;
 use Exception;
 use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
-use Uehatsu\LaravelCleanArchitecture\Test\Domains\ValueObjects\Mocks\CarbonNullableValueObjectMock;
 
 /**
  * CarbonNullableValueObject abstract class
@@ -30,7 +29,7 @@ class CarbonNullableValueObject implements ValueObjectCore
         } elseif (is_string($value)) {
             try {
                 $this->value = Carbon::parse($value);
-            } catch (Exception $e) {
+            } catch (Exception) {
                 $message = trans(
                     'uehatsu-lca::error.The :object should either be null or a valid date and time value.',
                     ['object' => static::$name]
