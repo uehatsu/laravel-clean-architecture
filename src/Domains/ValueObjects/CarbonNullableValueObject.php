@@ -12,7 +12,7 @@ use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 /**
  * CarbonNullableValueObject abstract class
  */
-class CarbonNullableValueObject implements ValueObjectCore
+abstract class CarbonNullableValueObject implements ValueObjectCore
 {
     private ?Carbon $value;
     protected static string $name = 'CarbonNullableValueObject';
