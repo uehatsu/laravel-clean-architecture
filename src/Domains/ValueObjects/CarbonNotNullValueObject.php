@@ -9,6 +9,9 @@ use DateTimeInterface;
 use Exception;
 use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 
+/**
+ * CarbonNotNullValueObject abstract class
+ */
 abstract class CarbonNotNullValueObject implements ValueObjectCore
 {
     private Carbon $value;
@@ -36,6 +39,9 @@ abstract class CarbonNotNullValueObject implements ValueObjectCore
         }
     }
 
+    /**
+     * @return Carbon
+     */
     public function getValue(): Carbon
     {
         return $this->value;

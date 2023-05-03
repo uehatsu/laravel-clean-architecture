@@ -10,6 +10,9 @@ use Exception;
 use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 use Uehatsu\LaravelCleanArchitecture\Test\Domains\ValueObjects\Mocks\CarbonNullableValueObjectMock;
 
+/**
+ * CarbonNullableValueObject abstract class
+ */
 class CarbonNullableValueObject implements ValueObjectCore
 {
     private ?Carbon $value;
@@ -39,6 +42,9 @@ class CarbonNullableValueObject implements ValueObjectCore
         }
     }
 
+    /**
+     * @return Carbon|null
+     */
     public function getValue(): ?Carbon
     {
         return $this->value;

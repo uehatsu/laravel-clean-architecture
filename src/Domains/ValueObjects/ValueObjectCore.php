@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Uehatsu\LaravelCleanArchitecture\Domains\ValueObjects;
 
+/**
+ * ValueObjectCore interface
+ */
 interface ValueObjectCore
 {
     /**

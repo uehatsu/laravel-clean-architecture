@@ -9,6 +9,9 @@ use DateTimeInterface;
 use Exception;
 use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 
+/**
+ * CarbonDateNullableValueObject abstract class
+ */
 abstract class CarbonDateNullableValueObject implements ValueObjectCore
 {
     private ?Carbon $value;
@@ -40,6 +43,9 @@ abstract class CarbonDateNullableValueObject implements ValueObjectCore
         $this->value = $tmp?->timezone(config('app.timezone'))->startOfDay();
     }
 
+    /**
+     * @return Carbon|null
+     */
     public function getValue(): ?Carbon
     {
         return $this->value;
