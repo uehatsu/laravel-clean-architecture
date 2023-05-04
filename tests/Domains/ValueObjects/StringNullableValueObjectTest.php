@@ -80,7 +80,9 @@ class StringNullableValueObjectTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('The StringNullableValueObject must be null or between 0 and 255 characters long.');
+        $this->expectExceptionMessage(
+            'The StringNullableValueObject must be null or between 0 and 255 characters long.'
+        );
 
         $value = str_repeat('x', 256);
 

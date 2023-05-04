@@ -54,7 +54,9 @@ class StringNotNullValueObjectTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('The StringNotNullValueObject must be at least 1 character and no more than 255 characters long.');
+        $this->expectExceptionMessage(
+            'The StringNotNullValueObject must be at least 1 character and no more than 255 characters long.'
+        );
 
         $value = '';
 
@@ -69,7 +71,9 @@ class StringNotNullValueObjectTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessage('The StringNotNullValueObject must be at least 1 character and no more than 255 characters long.');
+        $this->expectExceptionMessage(
+            'The StringNotNullValueObject must be at least 1 character and no more than 255 characters long.'
+        );
 
         $value = str_repeat('x', 256);
 
