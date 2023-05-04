@@ -6,9 +6,9 @@ namespace Uehatsu\LaravelCleanArchitecture\Test\Domains\ValueObjects;
 
 use Carbon\Carbon;
 use DateTime;
-use Uehatsu\LaravelCleanArchitecture\Test\TestCase;
 use Uehatsu\LaravelCleanArchitecture\Exceptions\InvalidArgumentException;
 use Uehatsu\LaravelCleanArchitecture\Test\Domains\ValueObjects\Mocks\CarbonDateNotNullValueObjectMock;
+use Uehatsu\LaravelCleanArchitecture\Test\TestCase;
 
 class CarbonDateNotNullValueObjectTest extends TestCase
 {

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Uehatsu\LaravelCleanArchitecture\Domains\ValueObjects;
@@ -20,8 +21,7 @@ abstract class StringNullableValueObject implements ValueObjectCore
      */
     public function __construct(
         ?string $value,
-    )
-    {
+    ) {
         $this->value = empty($value) ? null : $value;
 
         if (mb_strlen($this->value ?? '') > static::$length) {
