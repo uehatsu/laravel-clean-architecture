@@ -10,4 +10,6 @@ return [
     'The :object must be at least 1 character long.' => ':objectは1文字以上である必要があります。',
     'The :object must be a valid Ulid.' => ':objectは正しいUlidである必要があります。',
     'The :object must be null or a valid Ulid.' => ':objectはnullもしくは、正しいUlidである必要があります。',
+    'The :object must be a valid Uuid.' => ':objectは正しいUuidである必要があります。',
+    'The :object must be null or a valid Uuid.' => ':objectはnullもしくは、正しいUuidである必要があります。',
 ];

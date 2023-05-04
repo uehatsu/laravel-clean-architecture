@@ -10,4 +10,6 @@ return [
     'The :object must be at least 1 character long.' => 'The :object must be at least 1 character long.',
     'The :object must be a valid Ulid.' => 'The :object must be a valid Ulid.',
     'The :object must be null or a valid Ulid.' => 'The :object must be null or a valid Ulid.',
+    'The :object must be a valid Uuid.' => 'The :object must be a valid Uuid.',
+    'The :object must be null or a valid Uuid.' => 'The :object must be null or a valid Uuid.',
 ];
