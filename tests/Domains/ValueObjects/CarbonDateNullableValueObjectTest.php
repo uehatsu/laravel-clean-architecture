@@ -125,7 +125,7 @@ class CarbonDateNullableValueObjectTest extends TestCase
 
         $sut = new CarbonDateNullableValueObjectMock($value);
 
-        $this->assertTrue($sut->equals($sut));
+        $this->assertTrue($sut->eq($sut));
     }
 
     /**
@@ -139,8 +139,8 @@ class CarbonDateNullableValueObjectTest extends TestCase
         $sut1 = new CarbonDateNullableValueObjectMock($value);
         $sut2 = new CarbonDateNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -154,8 +154,8 @@ class CarbonDateNullableValueObjectTest extends TestCase
         $sut1 = new CarbonDateNullableValueObjectMock($value);
         $sut2 = new CarbonDateNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -170,8 +170,8 @@ class CarbonDateNullableValueObjectTest extends TestCase
         $sut1 = new CarbonDateNullableValueObjectMock($value1);
         $sut2 = new CarbonDateNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 
     /**
@@ -186,7 +186,7 @@ class CarbonDateNullableValueObjectTest extends TestCase
         $sut1 = new CarbonDateNullableValueObjectMock($value1);
         $sut2 = new CarbonDateNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 }

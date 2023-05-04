@@ -53,7 +53,7 @@ abstract class CarbonDateNotNullValueObject implements ValueObjectCore
      * @param static $other
      * @return bool
      */
-    public function equals($other): bool
+    public function eq($other): bool
     {
         return $other instanceof static && $this->value->eq($other->getValue());
     }

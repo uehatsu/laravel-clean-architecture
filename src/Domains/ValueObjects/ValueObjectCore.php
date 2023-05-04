@@ -19,5 +19,5 @@ interface ValueObjectCore
      * @param T $other
      * @return bool
      */
-    public function equals($other): bool;
+    public function eq($other): bool;
 }

@@ -64,7 +64,7 @@ class TextNullableValueObjectTest extends TestCase
 
         $sut = new TextNullableValueObjectMock($value);
 
-        $this->assertTrue($sut->equals($sut));
+        $this->assertTrue($sut->eq($sut));
     }
 
     /**
@@ -77,8 +77,8 @@ class TextNullableValueObjectTest extends TestCase
         $sut1 = new TextNullableValueObjectMock($value);
         $sut2 = new TextNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -91,8 +91,8 @@ class TextNullableValueObjectTest extends TestCase
         $sut1 = new TextNullableValueObjectMock($value);
         $sut2 = new TextNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -106,8 +106,8 @@ class TextNullableValueObjectTest extends TestCase
         $sut1 = new TextNullableValueObjectMock($value1);
         $sut2 = new TextNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 
     /**
@@ -121,7 +121,7 @@ class TextNullableValueObjectTest extends TestCase
         $sut1 = new TextNullableValueObjectMock($value1);
         $sut2 = new TextNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 }

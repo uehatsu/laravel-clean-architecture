@@ -89,7 +89,7 @@ class UuidNullableValueObjectTest extends TestCase
 
         $sut = new UuidNullableValueObjectMock($value);
 
-        $this->assertTrue($sut->equals($sut));
+        $this->assertTrue($sut->eq($sut));
     }
 
     /**
@@ -102,7 +102,7 @@ class UuidNullableValueObjectTest extends TestCase
 
         $sut = new UuidNullableValueObjectMock($value);
 
-        $this->assertTrue($sut->equals($sut));
+        $this->assertTrue($sut->eq($sut));
     }
 
     /**
@@ -116,8 +116,8 @@ class UuidNullableValueObjectTest extends TestCase
         $sut1 = new UuidNullableValueObjectMock($value);
         $sut2 = new UuidNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -131,8 +131,8 @@ class UuidNullableValueObjectTest extends TestCase
         $sut1 = new UuidNullableValueObjectMock($value);
         $sut2 = new UuidNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -147,8 +147,8 @@ class UuidNullableValueObjectTest extends TestCase
         $sut1 = new UuidNullableValueObjectMock($value1);
         $sut2 = new UuidNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 
     /**
@@ -163,7 +163,7 @@ class UuidNullableValueObjectTest extends TestCase
         $sut1 = new UuidNullableValueObjectMock($value1);
         $sut2 = new UuidNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 }

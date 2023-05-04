@@ -98,7 +98,7 @@ class UrlNullableValueObjectTest extends TestCase
 
         $sut = new UrlNullableValueObjectMock($value);
 
-        $this->assertTrue($sut->equals($sut));
+        $this->assertTrue($sut->eq($sut));
     }
 
     /**
@@ -112,8 +112,8 @@ class UrlNullableValueObjectTest extends TestCase
         $sut1 = new UrlNullableValueObjectMock($value);
         $sut2 = new UrlNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -127,8 +127,8 @@ class UrlNullableValueObjectTest extends TestCase
         $sut1 = new UrlNullableValueObjectMock($value);
         $sut2 = new UrlNullableValueObjectMock($value);
 
-        $this->assertTrue($sut1->equals($sut2));
-        $this->assertTrue($sut2->equals($sut1));
+        $this->assertTrue($sut1->eq($sut2));
+        $this->assertTrue($sut2->eq($sut1));
     }
 
     /**
@@ -143,8 +143,8 @@ class UrlNullableValueObjectTest extends TestCase
         $sut1 = new UrlNullableValueObjectMock($value1);
         $sut2 = new UrlNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 
     /**
@@ -159,7 +159,7 @@ class UrlNullableValueObjectTest extends TestCase
         $sut1 = new UrlNullableValueObjectMock($value1);
         $sut2 = new UrlNullableValueObjectMock($value2);
 
-        $this->assertFalse($sut1->equals($sut2));
-        $this->assertFalse($sut2->equals($sut1));
+        $this->assertFalse($sut1->eq($sut2));
+        $this->assertFalse($sut2->eq($sut1));
     }
 }
